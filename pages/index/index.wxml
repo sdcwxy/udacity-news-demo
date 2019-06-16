@@ -6,7 +6,16 @@
 </view>
 <view class='content-wrapper'>
   <view class='content-item' wx:for='{{[0, 1, 2, 3, 4, 5, 6]}}'>
-    <view wx:if='{{item === 0}}' class='content-top-wrapper'>top</view>
+    <view wx:if='{{item === 0}}' class='content-top-wrapper'>
+      <image class='top-wrapper-bgp' src='/img/pic.jpg'></image>
+      <view class='top-inner-wrapper'>
+        <view class='top'>
+          <view class='top-title'>title</view>
+          <view class='top-detail'>detail</view>
+        </view>
+        <image class='top-bgp' src='/img/pic.jpg'></image>
+      </view>
+    </view>
     <view wx:if='{{item !== 0}}' class='content-normal-wrapper'>
       <view class='normal-info'>
         <view class='normal-title'>title</view>

@@ -12,6 +12,10 @@
   color: white;
 }
 
+.content-top-wrapper {
+  height: 300rpx;
+}
+
 .content-normal-wrapper {
   display: flex;
   flex-direction: row;
