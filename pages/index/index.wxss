@@ -13,8 +13,24 @@
 }
 
 .content-top-wrapper {
-  height: 300rpx;
+  height: 450rpx;
 }
+
+.top-outer-bgp {
+  position:absolute;
+  height: 450rpx;
+  width: 100%;
+  z-index: -2;
+}
+
+.top-inner-bgp {
+  position: absolute;
+  margin: 20rpx 40rpx; 
+  height: 410rpx;
+  width: 100%;
+  z-index: -1;
+}
+
 
 .content-normal-wrapper {
   display: flex;
