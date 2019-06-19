@@ -36,18 +36,19 @@
   position: relative;
   color: white;
   margin: 0 60rpx;
-  top: 50%;
+  top: 60%;
 }
 
 .top-title {
-  font-size: 42rpx;
-  line-height: 58rpx; 
-  height: 120rpx;
+  font-weight: 600;
+  font-size: 30rpx;
+  line-height: 42rpx; 
+  height: 130rpx;
 }
 
 .top-detail {
-  font-size: 33rpx;
-  line-height: 50rpx; 
+  font-size: 23rpx;
+  line-height: 32rpx; 
 }
 
 .content-normal-wrapper {
@@ -62,21 +63,23 @@
 .normal-info {
   display: flex;
   flex-direction: column;
-  width: 400rpx;
+  width: 430rpx;
 }
 
 .normal-title {
-  font-size: 42rpx;
-  line-height: 58rpx; 
-  height: 120rpx;
+  font-size: 30rpx;
+  line-height: 42rpx; 
+  height: 130rpx;
+  margin-inline-end: 30rpx;
 }
 
 .normal-detail {
-  font-size: 33rpx;
-  line-height: 50rpx; 
+  font-size: 23rpx;
+  line-height: 32rpx; 
 }
 
 .normal-img {
-  height: 170rpx;
-  width: 270rpx;
+  flex-grow: 1;
+  height: 160rpx;
+  width: 220rpx;
 }
