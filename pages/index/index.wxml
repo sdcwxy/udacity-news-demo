@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <view class='title-bar'>
-  <view class='title' wx:for='{{[11, 22, 33, 44, 55, 66, 77]}}'>
-    <view >{{item}}</view>
+  <view class='title' wx:for='{{titles}}' bindtap='onTabTap' data-item='{{item}}'>
+    <view>{{item}}</view>
   </view>
 </view>
 <view class='content-wrapper'>
-  <view class='content-item' wx:for='{{newsList}}'>
-    <view wx:if='{{item.id === 0}}' class='content-top-wrapper'>
+  <view class='content-item' wx:for='{{newsList}}'  bindtap='onDetailTap' data-item='{{item}}'>
+    <view wx:if='{{item.index === 0}}' class='content-top-wrapper'>
       <image class='top-outer-bgp' src='{{item.img}}'></image>
       <image class='top-inner-bgp' src='{{item.img}}'></image>
       <view class='top-inner-wrapper'>
@@ -14,7 +14,7 @@
           <view class='top-detail'>{{item.detail}}</view>
       </view>
     </view>
-    <view wx:if='{{item.id !== 0}}' class='content-normal-wrapper'>
+    <view wx:if='{{item.index !== 0}}' class='content-normal-wrapper'>
       <view class='normal-info'>
         <view class='normal-title'>{{item.title}}</view>
         <view class='normal-detail'>{{item.detail}}</view>

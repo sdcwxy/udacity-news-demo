@@ -1,47 +1,68 @@
 const TitleName = {
-  'gn': '国内',
-  'gj': '国际',
-  'cj': '财经',
-  'yl': '娱乐',
-  'js': '军事',
-  'ty': '体育',
-  'other' : '其他'
+  '国内': 'gn',
+  '国际': 'gj',
+  '财经': 'cj',
+  '娱乐': 'yl',
+  '军事': 'js',
+  '体育': 'ty',
+  '其他': 'other' 
 }
+const Titles = ['国内','国际','财经','娱乐','军事','体育','其他']
 
 Page({
   data: {
     newsList: [],
-    title: 'gn',
+    currentTitle: 'gn',
+    titles: Titles,
   },
   onLoad() {
     this.getNews()
   },
-  getNews(){
+  onPullDownRefresh() {
+    this.getNews(() => {
+      wx.stopPullDownRefresh()
+    })
+  },
+  onTabTap: function(event){
+    let title = event.currentTarget.dataset.item
+    this.setData({
+      currentTitle: TitleName[title]
+    })
+    this.getNews()
+  },
+  onDetailTap(event){
+    let items = event.currentTarget.dataset.item
+    wx.navigateTo({
+      url: '/pages/news/news?id=' + items.id,
+    })
+  },
+  getNews(callback){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
-        type: this.data.title,
+        type: this.data.currentTitle,
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: res => {
-        console.log(this.title)
         let result = res.data.result
-        console.log(result)
         let newsList = []
         for (let i = 0; i < result.length; i++) {
           newsList.push({
-            id: i,
+            index: i,
             title: result[i].title,
             detail: result[i].source + '    ' + result[i].date.substring(11, 16),
-            img: result[i].firstImage
+            img: result[i].firstImage,
+            id: result[i].id
           })
         }
-        console.log(newsList)
         this.setData({
           newsList: newsList
         })
+      }, 
+      complete: () => {
+        callback && callback()
       }
     })
   }
