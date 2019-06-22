@@ -13,12 +13,12 @@
 }
 
 .content-top-wrapper {
-  height: 450rpx;
+  height: 500rpx;
 }
 
 .top-outer-bgp {
   position:absolute;
-  height: 450rpx;
+  height: 500rpx;
   width: 100%;
   z-index: -2;
   opacity: 0.5;
@@ -27,7 +27,7 @@
 .top-inner-bgp {
   position: absolute;
   margin: 20rpx 30rpx; 
-  height: 410rpx;
+  height: 460rpx;
   width: 690rpx;
   z-index: -1;
 }
@@ -70,11 +70,11 @@
   font-size: 30rpx;
   line-height: 42rpx; 
   height: 130rpx;
-  margin-inline-end: 30rpx;
+  margin-right: 30rpx;
 }
 
 .normal-detail {
-  font-size: 23rpx;
+  font-size: 23rpx; 
   line-height: 32rpx; 
 }
 

@@ -1,9 +1,13 @@
 <view class='title-wrapper'>
-  <view class='title'>title</view>
-  <view class='detail'>title detial</view>
+  <view class='title'>{{title}}</view>
+  <view >
+    <view class='detail'>{{detail}}</view>
+    <view class='readcount'>{{readcount}}</view>
+  </view>
 </view>
 <view class='content-wrapper'>
-  <view class='paragraph-1'>p1</view>
-  <image class='content-img' src=''></image>
-  <view class='paragraph-2'>p2</view>
+  <view class='paragraph' wx:for='{{paragraph}}'>
+    <view>{{item.text}}</view>
+  </view>
+  <image class='content-img' src='{{img}}'></image>
 </view>

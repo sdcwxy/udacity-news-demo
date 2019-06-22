@@ -3,10 +3,9 @@ Page({
     id: '',
     title: '',
     detail: '',
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraph: [],
     img: '',
-    readcount: ''
+    readcount: 0
   },
   onLoad(options){
     this.setData({
@@ -27,6 +26,13 @@ Page({
       success: res => {
         let detail = res.data.result
         console.log(detail)
+        this.setData ({
+          title: detail.title,
+          detail: detail.source,
+          readcount: detail.readCount,
+          paragraph: detail.content,
+          img: detail.firstImage
+        })
       },
     })
   }
