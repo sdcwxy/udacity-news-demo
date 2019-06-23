@@ -29,7 +29,7 @@ Page({
         this.setData ({
           title: detail.title,
           detail: detail.source,
-          readcount: detail.readCount,
+          readcount: '阅读 ' + detail.readCount,
           paragraph: detail.content,
           img: detail.firstImage
         })

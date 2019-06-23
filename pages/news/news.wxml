@@ -1,6 +1,6 @@
 <view class='title-wrapper'>
   <view class='title'>{{title}}</view>
-  <view >
+  <view class='subtitle'>
     <view class='detail'>{{detail}}</view>
     <view class='readcount'>{{readcount}}</view>
   </view>

@@ -1,0 +1,15 @@
+.title-wrapper {
+  margin: 30rpx 20rpx
+}
+
+.title {
+  font-size: 40rpx;
+  line-height: 56rpx;
+  margin-bottom: 20rpx;
+}
+
+.subtitle {
+  font-size: 25rpx;
+  line-height: 33rpx;
+  display: flex;
+}
