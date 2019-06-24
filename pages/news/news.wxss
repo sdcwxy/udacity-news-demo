@@ -1,5 +1,5 @@
 .title-wrapper {
-  margin: 30rpx 20rpx
+  margin: 30rpx 40rpx;
 }
 
 .title {
@@ -9,7 +9,35 @@
 }
 
 .subtitle {
+  display: inline-block;
   font-size: 25rpx;
   line-height: 33rpx;
-  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.detail {
+  float:left; 
+  width:250px; 
+  text-align:left;
+}
+
+.readcount {
+  float:right;
+  width:100px; 
+  text-align:right; 
+}
+
+.content-wrapper {
+  margin: 50rpx 40rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.paragraph {
+  margin: 20rpx 0;
+}
+
+.content-img {
+  margin: 20rpx 0;
+  width: 100%;
 }

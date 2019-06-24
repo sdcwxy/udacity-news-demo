@@ -7,7 +7,10 @@
 </view>
 <view class='content-wrapper'>
   <view class='paragraph' wx:for='{{paragraph}}'>
-    <view>{{item.text}}</view>
+    <view wx:if='{{item.id == 1}}'>
+      <view>{{item.text}}</view>
+      <image class='content-img' src='{{img}}'></image>
+    </view>
+    <view wx:else>{{item.text}}</view>
   </view>
-  <image class='content-img' src='{{img}}'></image>
 </view>

@@ -12,6 +12,10 @@
   color: white;
 }
 
+current-title {
+  font-style: bold;
+}
+
 .content-top-wrapper {
   height: 500rpx;
 }

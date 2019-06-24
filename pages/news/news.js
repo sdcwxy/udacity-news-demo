@@ -28,7 +28,7 @@ Page({
         console.log(detail)
         this.setData ({
           title: detail.title,
-          detail: detail.source,
+          detail: detail.source + '    ' + detail.date.substring(11, 16),
           readcount: '阅读 ' + detail.readCount,
           paragraph: detail.content,
           img: detail.firstImage
