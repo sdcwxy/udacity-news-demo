@@ -12,8 +12,9 @@ const Titles = ['国内','国际','财经','娱乐','军事','体育','其他']
 Page({
   data: {
     newsList: [],
-    currentTitle: 'gn',
+    currentTitle: '国内',
     titles: Titles,
+    titleFontStyle: 'bold'
   },
   onLoad() {
     this.getNews()
@@ -26,7 +27,7 @@ Page({
   onTabTap: function(event){
     let title = event.currentTarget.dataset.item
     this.setData({
-      currentTitle: TitleName[title]
+      currentTitle: title
     })
     this.getNews()
   },
@@ -40,7 +41,7 @@ Page({
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
-        type: this.data.currentTitle,
+        type: TitleName[this.data.currentTitle],
       },
       header: {
         'content-type': 'application/json' // 默认值

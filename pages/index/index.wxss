@@ -12,7 +12,7 @@
   color: white;
 }
 
-current-title {
+.current-title {
   font-style: bold;
 }
 
