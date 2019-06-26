@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class='title-bar'>
-  <view class='title' wx:for='{{titles}}' bindtap='onTabTap' data-item='{{item}}' style="font-weight:{{item==currentTitle?'bold':'normal'}};">
-    <view>{{item}}</view>
+  <view class='title' wx:for='{{titles}}' bindtap='onTabTap' data-item='{{item}}'>
+    <view wx:if='{{item==currentTitle}}' class='current-title'>{{item}}</view>
+    <view wx:else>{{item}}</view>
   </view>
 </view>
 <view class='content-wrapper'>

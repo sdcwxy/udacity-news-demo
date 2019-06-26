@@ -7,13 +7,16 @@
 .title {
   text-align: center;
   width: 100rpx;
+  font-size: 35rpx;
   line-height: 42rpx;
   margin: 20rpx 0;
   color: white;
 }
 
 .current-title {
-  font-style: bold;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
 }
 
 .content-top-wrapper {

@@ -3,15 +3,13 @@ Page({
     id: '',
     title: '',
     detail: '',
-    paragraph: [],
-    img: '',
+    content: [],
     readcount: 0
   },
   onLoad(options){
     this.setData({
       id: options.id
     })
-    console.log(this.data.id)
     this.getNews()
   },
   getNews(){
@@ -30,8 +28,7 @@ Page({
           title: detail.title,
           detail: detail.source + '    ' + detail.date.substring(11, 16),
           readcount: '阅读 ' + detail.readCount,
-          paragraph: detail.content,
-          img: detail.firstImage
+          content: detail.content,
         })
       },
     })
