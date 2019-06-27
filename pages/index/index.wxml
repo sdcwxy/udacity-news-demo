@@ -5,8 +5,8 @@
     <view wx:else>{{item}}</view>
   </view>
 </view>
-<view class='content-wrapper'>
-  <view class='content-item' wx:for='{{newsList}}'  bindtap='onDetailTap' data-item='{{item}}'>
+<view>
+  <view wx:for='{{newsList}}'  bindtap='onDetailTap' data-item='{{item}}'>
     <view wx:if='{{item.index === 0}}' class='content-top-wrapper'>
       <image class='top-outer-bgp' src='{{item.img}}'></image>
       <image class='top-inner-bgp' src='{{item.img}}'></image>

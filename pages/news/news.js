@@ -23,7 +23,6 @@ Page({
       },
       success: res => {
         let detail = res.data.result
-        console.log(detail)
         this.setData ({
           title: detail.title,
           detail: detail.source + '    ' + detail.date.substring(11, 16),

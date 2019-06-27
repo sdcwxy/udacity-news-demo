@@ -48,23 +48,26 @@ Page({
       },
       success: res => {
         let result = res.data.result
-        let newsList = []
-        for (let i = 0; i < result.length; i++) {
-          newsList.push({
-            index: i,
-            title: result[i].title,
-            detail: result[i].source + '    ' + result[i].date.substring(11, 16),
-            img: result[i].firstImage,
-            id: result[i].id
-          })
-        }
-        this.setData({
-          newsList: newsList
-        })
+        this.setNewsData(result)
       }, 
       complete: () => {
         callback && callback()
       }
+    })
+  },
+  setNewsData(result){
+    let newsList = []
+    for (let i = 0; i < result.length; i++) {
+      newsList.push({
+        index: i,
+        title: result[i].title,
+        detail: result[i].source + '    ' + result[i].date.substring(11, 16),
+        img: result[i].firstImage,
+        id: result[i].id
+      })
+    }
+    this.setData({
+      newsList: newsList
     })
   }
 })
