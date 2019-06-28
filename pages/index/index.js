@@ -14,7 +14,9 @@ Page({
     newsList: [],
     currentTitle: '国内',
     titles: Titles,
-    titleFontStyle: 'bold'
+    titleFontStyle: 'bold',
+    deafultImg: '/img/pic.jpg',
+    deafultSource: '默认来源'
   },
   onLoad() {
     this.getNews()
@@ -58,11 +60,13 @@ Page({
   setNewsData(result){
     let newsList = []
     for (let i = 0; i < result.length; i++) {
+      let img = result[i].firstImage ? result[i].firstImage : this.data.deafultImg
+      let source = result[i].source ? result[i].source : this.data.deafultSource
       newsList.push({
         index: i,
         title: result[i].title,
-        detail: result[i].source + '    ' + result[i].date.substring(11, 16),
-        img: result[i].firstImage,
+        detail: source + '    ' + result[i].date.substring(11, 16),
+        img: img,
         id: result[i].id
       })
     }
